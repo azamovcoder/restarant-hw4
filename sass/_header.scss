@@ -1,157 +1,112 @@
-.header{
-    background: url(../images/hero.png) no-repeat;
-    background-size: 100%;
-   
-    .header__navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    color: $primaryCl;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  color: $secondaryCl;
+  background-color: rgba(0, 0, 0, 0.932);
+  .header__navbar {
     justify-content: space-between;
-    padding: 10px 0;
-    }
-    &__logo{
-        width: 100px;
-        img{
-            width: 100%;
-        }
-    }
-    &__list{
-        gap: 20px;
-        &__item{
-            padding: 6px 0;
-        }
-    }
+    padding: 10px 0px;
+  }
 
-    &__item{
-        padding: 4px 0;
-        border-bottom: 1px solid transparent;
-        transition: 0.4s;
-        font-weight: 600;
-        &:hover{
-            border-color: $hoverCl;
-            color: $hoverCl;
-        }
+  &__midle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+      width: 20px;
+      cursor: pointer;
     }
-    &__hamburger{
-        border: none;
-        background: transparent;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        display: none;
-        span{
-            width: 20px;
-            height: 2.5px;
-            background: red;
-            border-radius: 2px;
-            transition: .4s;
-        }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &__card {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
-    &__shop_btn{
-        padding: 10px 20px;
-        border-right: 1.5px solid $secondaryCl;
-    }
-    &__right{
-        gap: 20px;
-        color: $secondaryCl;
+  }
 
 
+  &__logo {
+    font-size: 30px;
+    font-weight: bold;
+  }
 
+  &__list {
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 4px 0px;
+    border-bottom: 2px solid transparent;
+    transition: 0.4s;
+    font-weight: 600;
+    color: $secondaryCl;
+    &:hover {
+      border-color: $hoverCl;
+      color: $hoverCl;
     }
-    &__number__desc{
-        width: 180px;
+  }
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    span {
+      width: 20px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
     }
-    &__btn{
-        @include btn()
-    }
-    &__hero{
-        padding: 200px 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    &__information{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    &__desc{
-        color: $titleCl;
-        font-size: 50px;
-        font-weight: 400;
-    }
-    &__title{
-        color: $titleCl;
-        font-size: 80px;
-        font-weight: 400;
-    }
-    &__info{
-        color: $secondaryCl;
-    }
-    &__hero__btn{
-        @include btn()
-    }
+  }
 }
 
-
-@media (max-width:1100px) {
-    .header{
-        &__list{
-            position: fixed;
-            top: 0;
-            left: -100%;
-            background: $secondaryCl;
-            width: 60%;
-            height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            box-shadow:  0px 0px 10px $hoverCl;
-            transition: 0.4s;
-            z-index: 9999;
-
-        }
-        &__shop_btn{
-            display: none;
-        }
-        &__hamburger{
-            display: flex;
-            border: none;
-            background-color: $secondaryCl;
-        }
-        &__show-list{
-            left: 0;
-            background-color: $primaryCl;
-
-        }
-
+@media (max-width:1030px) {
+  .header {
+    &__list {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      background: $secondaryCl;
+      width: 60%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0px 0px 10px $hoverCl;
+      transition: 0.4s;
+      z-index: 9999;
     }
-}
-@media (max-width:800px) {
-    .header{
-        &__logo{
-            width: 70px;
-        }
-        &__number{
-            display: none;
-        }
+    
+    &__item {
+      color: $primaryCl;
     }
+
+    &__hamburger {
+      display: flex;
+    }
+    &__show-list {
+      left: 0;
+    }
+  }
+
+  @media (max-width:700px) {
+    .header__bottom,
+    .header__midle img{
+      display: none !important;
+    }
+  }
 }
 
-@media (max-width:500px) {
-    .header{
-        &__btn{
-            padding: 6px 12px;
-        }
-    }
-}
-@media (max-width:500px) {
-    .header {
-        &__btn {
-            display: none;
-        }
-    }
+.show__header__shrink {
+  padding: 15px 0;
+  box-shadow: 0px 0px 10px var(--hoverColor);
+  background: black;
 }

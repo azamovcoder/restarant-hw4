@@ -1,0 +1,37 @@
+.info {
+  background-color: #E5E5E5;
+  text-align: center;
+  padding: 60px 0px;
+  &__text {
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    padding: 10px 0px;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+
+  &__title {
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0em;
+    padding: 10px 0px;
+  }
+
+  .info__desc {
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}

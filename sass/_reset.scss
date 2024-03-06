@@ -1,28 +1,39 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Tinos", serif;
+* {
+  margin: 0;
+  padding: 0;
+  block-size: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-a{
-    color: inherit;
+a {
+  color: inherit;
 }
 
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-.container{
-    width: 85%;
-    margin: 0 auto;
-    max-width: 1440px;
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
-.df{
-    display: flex;
-    align-items: center;
+.df {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding: 15px 35px;
+  background-color: #FF7400;
+  color:$secondaryCl;
+  border: 1px solid #FF7400;
+  transition: .8s;
+  &:hover {
+    border: 1px solid #FF7400;
+    color: #FF7400;
+    background-color: $secondaryCl;
+  }
 }
