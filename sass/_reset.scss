@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Tinos", serif;
+}
+
+a{
+    color: inherit;
+}
+
+button{
+    cursor: pointer;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+}

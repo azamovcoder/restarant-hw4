@@ -1,0 +1,157 @@
+.header{
+    background: url(../images/hero.png) no-repeat;
+    background-size: 100%;
+   
+    .header__navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    color: $primaryCl;
+    justify-content: space-between;
+    padding: 10px 0;
+    }
+    &__logo{
+        width: 100px;
+        img{
+            width: 100%;
+        }
+    }
+    &__list{
+        gap: 20px;
+        &__item{
+            padding: 6px 0;
+        }
+    }
+
+    &__item{
+        padding: 4px 0;
+        border-bottom: 1px solid transparent;
+        transition: 0.4s;
+        font-weight: 600;
+        &:hover{
+            border-color: $hoverCl;
+            color: $hoverCl;
+        }
+    }
+    &__hamburger{
+        border: none;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        display: none;
+        span{
+            width: 20px;
+            height: 2.5px;
+            background: red;
+            border-radius: 2px;
+            transition: .4s;
+        }
+    }
+    &__shop_btn{
+        padding: 10px 20px;
+        border-right: 1.5px solid $secondaryCl;
+    }
+    &__right{
+        gap: 20px;
+        color: $secondaryCl;
+
+
+
+    }
+    &__number__desc{
+        width: 180px;
+    }
+    &__btn{
+        @include btn()
+    }
+    &__hero{
+        padding: 200px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    &__desc{
+        color: $titleCl;
+        font-size: 50px;
+        font-weight: 400;
+    }
+    &__title{
+        color: $titleCl;
+        font-size: 80px;
+        font-weight: 400;
+    }
+    &__info{
+        color: $secondaryCl;
+    }
+    &__hero__btn{
+        @include btn()
+    }
+}
+
+
+@media (max-width:1100px) {
+    .header{
+        &__list{
+            position: fixed;
+            top: 0;
+            left: -100%;
+            background: $secondaryCl;
+            width: 60%;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow:  0px 0px 10px $hoverCl;
+            transition: 0.4s;
+            z-index: 9999;
+
+        }
+        &__shop_btn{
+            display: none;
+        }
+        &__hamburger{
+            display: flex;
+            border: none;
+            background-color: $secondaryCl;
+        }
+        &__show-list{
+            left: 0;
+            background-color: $primaryCl;
+
+        }
+
+    }
+}
+@media (max-width:800px) {
+    .header{
+        &__logo{
+            width: 70px;
+        }
+        &__number{
+            display: none;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .header{
+        &__btn{
+            padding: 6px 12px;
+        }
+    }
+}
+@media (max-width:500px) {
+    .header {
+        &__btn {
+            display: none;
+        }
+    }
+}
